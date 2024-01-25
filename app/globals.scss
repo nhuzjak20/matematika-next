@@ -43,6 +43,14 @@ body {
   @return $random_range;
 }
 
+div input[type="number"] {
+  padding: 1%;
+  border-radius: 10px;
+  margin: 1%;
+  color: black;
+  width: 7%;
+}
+
 .stars {
   position: fixed;
   z-index: -5;

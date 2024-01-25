@@ -1,7 +1,7 @@
 import React from "react";
 import CardContent from "@mui/material/CardContent";
 import VektorskiProduktModal from "./VektorskiProduktModal";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import Link from "next/link";
 import "../globals.scss";
 import BasicModal from "./BasicModal";
@@ -74,11 +74,20 @@ function page() {
               <div className="flex flex-row justify-between m-3">
                 <div>
                   <BasicModal
-                    title="vektorskiProdukt"
+                    title="Vektorski Produkt"
                     content={<VektorskiProduktModal></VektorskiProduktModal>}
                   ></BasicModal>
                 </div>
-                <div></div>
+                <div>
+                  <Link
+                    href="/generalnikalkulator/vektorskiprodukt"
+                    legacyBehavior
+                  >
+                    <a>
+                      <Button>Tekst</Button>
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
