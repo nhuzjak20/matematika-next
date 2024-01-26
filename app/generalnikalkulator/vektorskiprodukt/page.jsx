@@ -3,16 +3,27 @@
 import React, { useState } from "react";
 import { Accordion, AccordionSummary } from "@mui/material";
 import "../../globals.scss";
+import Rijesenje from "./Rijesenje";
+import { Button } from "@mui/material";
 
 export default function GeneralKalkulator() {
-  const [VektorA, OnChangeA] = useState(0);
-  const [VektorB, OnChangeB] = useState(0);
+  const [rijesenje, PromjeniRijesenje] = useState(0);
   const [V11, ChangeV11] = useState(0);
   const [V12, ChangeV12] = useState(0);
   const [V13, ChangeV13] = useState(0);
   const [V21, ChangeV21] = useState(0);
   const [V22, ChangeV22] = useState(0);
   const [V23, ChangeV23] = useState(0);
+  let vektori = {
+    v11: V11,
+    v12: V12,
+    v13: V13,
+    v21: V21,
+    v22: V22,
+    v23: V23,
+    rijesenje: rijesenje,
+  };
+
   return (
     <div>
       <div className="stars">
@@ -67,10 +78,10 @@ export default function GeneralKalkulator() {
         <div className="star"></div>
         <div className="star"></div>
       </div>
-      <div>
-        <div className="flex flex-row items-center w-100">
-          <div className="flex flex-row space-evenly items-center w-fit">
-            <h4>A = (</h4>
+      <div className="glassy-background w-1/2 p-3 m-auto">
+        <div className="flex flex-row items-center m-auto justify-evenly justify-items-center">
+          <div className="flex flex-row space-evenly items-center justify-center ">
+            <h4>Vektor A = (</h4>
             <input
               type="number"
               value={V11}
@@ -96,7 +107,7 @@ export default function GeneralKalkulator() {
             />
             <h4>)</h4>
           </div>
-          <div div className="flex flex-row space-evenly items-center">
+          <div className="flex flex-row space-evenly items-center justify-center ">
             <h4>B = (</h4>
             <input
               type="number"
@@ -126,11 +137,25 @@ export default function GeneralKalkulator() {
             />
             <h4>)</h4>
           </div>
-          <div></div>
+          <div>
+            <Button
+              variant="contained"
+              onClick={() => {
+                PromjeniRijesenje(0);
+                PromjeniRijesenje(1);
+              }}
+            >
+              Izračunaj
+            </Button>
+          </div>
         </div>
-        <div>
+
+        <div className=" m-auto">
           <Accordion>
-            <AccordionSummary>Riješenje</AccordionSummary>
+            <AccordionSummary>
+              {rijesenje ? <p>Riješenje</p> : <p>Unesi riješenje</p>}
+            </AccordionSummary>
+            {rijesenje ? <Rijesenje props={vektori}></Rijesenje> : ""}
           </Accordion>
         </div>
       </div>

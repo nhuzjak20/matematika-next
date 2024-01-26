@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CardContent from "@mui/material/CardContent";
 import VektorskiProduktModal from "./VektorskiProduktModal";
