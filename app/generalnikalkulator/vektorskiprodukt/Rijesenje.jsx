@@ -14,7 +14,7 @@ import nerdamer from "nerdamer";
   );
 }*/
 
-function Rijesenje(props) {
+function Rijesenje({ props }) {
   const [rijesenje, PromjeniRijesenje] = useState(0);
   function returnUmnozak() {
     var text = "cross([" + props.v11;
@@ -25,15 +25,20 @@ function Rijesenje(props) {
     console.log(text);
     return text;
   }
-  console.log("Dobar dan");
-  var x = nerdamer(returnUmnozak()).evaluate();
-  var Vektor = linearAlgebra.Vector;
+  var rezultat = returnUmnozak();
+  console.log(props[0], "Dobar dan");
+  var x = nerdamer(rezultat).evaluate();
+  console.log(x.toString());
   return (
     <>
       <div>
-        <h4>
-          AB = ({x[0]},{x[1]},{x[2]})
-        </h4>
+        <div>
+          <h4>
+            A=({props.v11}, {props.v12}, {props.v13}) <b>X</b> B={props.v21},{" "}
+            {props.v22},{props.v23}) = AB
+          </h4>
+        </div>
+        <h4>AB = ({nerdamer(returnUmnozak()).evaluate().toString()})</h4>
       </div>
     </>
   );
