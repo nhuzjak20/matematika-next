@@ -85,7 +85,7 @@ function page() {
                     legacyBehavior
                   >
                     <a>
-                      <Button>Tekst</Button>
+                      <Button>Kalkulator</Button>
                     </a>
                   </Link>
                 </div>

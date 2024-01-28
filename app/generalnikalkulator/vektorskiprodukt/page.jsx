@@ -27,11 +27,7 @@ export default function GeneralKalkulator() {
 
   return (
     <div>
-      <AppBar
-        position="static"
-        className="flex flex-row justify-evenly"
-        color="black"
-      >
+      <AppBar position="static" className="flex flex-row justify-evenly">
         <Link href="/generalnikalkulator">
           <Button variant="contained">Nazad</Button>
         </Link>
