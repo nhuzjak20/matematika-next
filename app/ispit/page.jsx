@@ -1,11 +1,6 @@
-"use client";
 import React from "react";
-import CardContent from "@mui/material/CardContent";
-import VektorskiProduktModal from "./VektorskiProduktModal";
-import { Typography, Button } from "@mui/material";
-import Link from "next/link";
 import "../globals.scss";
-import BasicModal from "./BasicModal";
+import MyCard from "./MyCard";
 
 function page() {
   return (
@@ -62,42 +57,35 @@ function page() {
         <div className="star"></div>
         <div className="star"></div>
       </div>
-      <div className="grid grid-cols-3 grid-rows-3 gap-3">
-        <div className="grid row-span-1">
-          <div class="container grid-span-2 ">
-            <div className="glassy-background m-4">
-              <CardContent>
-                <Typography variant="h4">Vektorski Produkt</Typography>
-                <Typography variant="p">
-                  Računanje vektorskog produkta dvaju trodimenzionalnih vektora
-                </Typography>
-              </CardContent>
-              <div className="flex flex-row justify-between m-3">
-                <div>
-                  <BasicModal
-                    title="Vektorski Produkt"
-                    content={<VektorskiProduktModal></VektorskiProduktModal>}
-                  ></BasicModal>
-                </div>
-                <div>
-                  <Link
-                    href="/generalnikalkulator/vektorskiprodukt"
-                    legacyBehavior
-                  >
-                    <a>
-                      <Button>Kalkulator</Button>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="grid row-span-1">
-          <VektorskiProduktModal></VektorskiProduktModal>
-          <p>Tekst</p>
-        </div>
-        <div className="grid row-span-1">c</div>
+      <div>
+        <MyCard
+          props={{
+            title: "Gradijent Funkcije",
+            href: "/ispit/gradijentfunkcije",
+            desc: "Zadana je funkcija f(x,y)=[neka funkcija] i točka T(x,y). Odredi gradijent funkcije f u točki T, odredi usmjerenu derivaciju derivaciju funkcije u točki T duž određenog Vektora",
+          }}
+        ></MyCard>
+        <MyCard
+          props={{
+            title: "Globalni Minimum i maksimum dužine",
+            href: "/ispit/globminmax",
+            desc: "Zadana je funkcija f(x,y)=[neka funkcija]i točke A([x1,y1]) i B(x2,y2). Odredite globalne ekstreme funkcije f na dužini AB",
+          }}
+        ></MyCard>
+        <MyCard
+          props={{
+            title: "Zadana je ploha r(u,v)=...",
+            href: "/ispit/zadanajeploha",
+            desc: "Zadana je ploha r(u,v)=(nešto v&&u, nešto v&&u, nešto v&&u) i točka T(x,y,z) koja se nalazi na zadanoj plohi. Neka je  Π  tangencijalna ravnina na zadanu plohu u točki T ",
+          }}
+        ></MyCard>
+        <MyCard
+          props={{
+            title: "Dva Mimoilazna pravca",
+            href: "/ispit/mimosmjernipravci",
+            desc: "Zadana su dva mimosmjerna pravca P1 i P2. Neka je pravac n njihova zajednička normala. Odredi koordinate točke N1 koja je presjek pravca n i P1. Odredi koordinate točke N2 koja je presjek pravca n i P2",
+          }}
+        ></MyCard>
       </div>
     </>
   );
