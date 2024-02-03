@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./globals.scss";
 import Card from "@mui/material/Card";
+import MyAppBar from "./MyAppBar";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { Typography } from "@mui/material";
@@ -60,7 +61,8 @@ export default function Home() {
         <div className="star"></div>
         <div className="star"></div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-3 gap-2">
+      <MyAppBar></MyAppBar>
+      <div className="grid grid-cols-2 grid-rows-4 gap-2">
         <div className="col-start-1 row-start-1 col-end-1 row-end-1">
           <div className="container grid-span-2 ">
             <Link href="/generalnikalkulator" legacyBehavior>
@@ -87,9 +89,8 @@ export default function Home() {
                 <CardContent>
                   <Typography variant="h4">Prvi Kolokvij</Typography>
                   <Typography variant="p">
-                    Kalkulator namjenjem osnovnim operacijama kao što je
-                    deriviranje, riješavanje jednadžbi, vektorskim operacijama
-                    itd...
+                    Kalkulator koji uključuje zadatke i teoriju sa prvoga
+                    kolokvija
                   </Typography>
                 </CardContent>
                 <CardActions>Gumbek</CardActions>
@@ -130,9 +131,9 @@ export default function Home() {
                 <CardContent>
                   <Typography variant="h4">Ispit</Typography>
                   <Typography variant="p">
-                    Kalkulator namjenjem osnovnim operacijama kao što je
-                    deriviranje, riješavanje jednadžbi, vektorskim operacijama
-                    itd...
+                    Skup kalkulatora prilagođen riješavanju zadatka sa ispita.
+                    Uključuje sve autoru poznate zadatke koji su do sada bili na
+                    ispitu.
                   </Typography>
                 </CardContent>
                 <CardActions>Gumbek</CardActions>

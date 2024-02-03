@@ -3,7 +3,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import math from "mathjs";
+var math = require("mathjs");
 
 function pretvoriPIuBroj(str) {
   const piSymbol = "π";
@@ -16,7 +16,10 @@ function pretvoriPIuBroj(str) {
   return noviString;
 }
 
-function Postupak({ tx, ty, eq }) {
+function Postupak({ props }) {
+  const tocka = [props.tx, props.ty];
+  console.log(props);
+  const jednadba = props.eq;
   let xDerivacija = undefined;
   let yDerivacija = undefined;
   let TockaRijesenje1 = undefined;

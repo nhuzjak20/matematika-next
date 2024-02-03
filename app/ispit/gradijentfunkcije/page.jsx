@@ -18,7 +18,7 @@ function Page() {
   const [eq, ChangeEq] = useState("");
   const [tX, ChangeTX] = useState(0);
   const [tY, ChangeTY] = useState(0);
-  const [rijeseno, Prepravi] = useState(0);
+  const [rijeseno, Prepravi] = useState(false);
   return (
     <>
       <div className="stars">
@@ -76,7 +76,7 @@ function Page() {
       <Card className="flex flex-col items-center glassy-background-white w-fit p-4 m-auto my-24">
         <div className="flex justify-center items-center p-2">
           <Typography variant="h5" color="black">
-            f(x,y)=
+            f(x,y)= π
           </Typography>
           <TextField
             variant="filled"
@@ -114,7 +114,7 @@ function Page() {
           <ButtonGroup>
             <Button
               onClick={() => {
-                () => Prepravi(1);
+                () => Prepravi(true);
               }}
             >
               Riješi
@@ -131,9 +131,11 @@ function Page() {
           </div>
         </div>
         {rijeseno ? (
-          <Postupak tx={tX} ty={tY} eq={eq}></Postupak>
+          <Postupak props={{ tx: tX, ty: tY, eq: eq }}></Postupak>
         ) : (
-          <Accordion disabled></Accordion>
+          <Typography variant="h3">
+            {tX}, {tY}, {eq}
+          </Typography>
         )}
       </Card>
     </>
