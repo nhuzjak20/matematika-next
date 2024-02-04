@@ -136,7 +136,7 @@ export default function Home() {
                     ispitu.
                   </Typography>
                 </CardContent>
-                <CardActions>Gumbek</CardActions>
+                <CardActions>Ispitni Kalkulator</CardActions>
               </div>
             </a>
           </Link>

@@ -2,7 +2,7 @@
 import React from "react";
 import Accordion from "@mui/material/Accordion";
 import { useState } from "react";
-import Postupak from "./postupak";
+import Postupak from "./Postupak";
 import Link from "next/link";
 import {
   Card,
@@ -114,7 +114,9 @@ function Page() {
           <ButtonGroup>
             <Button
               onClick={() => {
-                () => Prepravi(true);
+                Prepravi(true);
+                //console.log(tX, tY, eq);
+                console.log(rijeseno);
               }}
             >
               Riješi
@@ -130,13 +132,10 @@ function Page() {
             </Link>
           </div>
         </div>
-        {rijeseno ? (
-          <Postupak props={{ tx: tX, ty: tY, eq: eq }}></Postupak>
-        ) : (
-          <Typography variant="h3">
-            {tX}, {tY}, {eq}
-          </Typography>
-        )}
+        <Typography variant="h3">
+          {tX}, {tY}, {eq}
+        </Typography>
+        {rijeseno ? <Postupak tx={tX} ty={tY} eq={eq}></Postupak> : null}
       </Card>
     </>
   );

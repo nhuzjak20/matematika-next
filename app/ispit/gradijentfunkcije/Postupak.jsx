@@ -16,15 +16,40 @@ function pretvoriPIuBroj(str) {
   return noviString;
 }
 
-function Postupak({ props }) {
-  const tocka = [props.tx, props.ty];
-  console.log(props);
-  const jednadba = props.eq;
+function Postupak({ tx, ty, eq }) {
+  const tocka = [tx, ty];
+  console.log(tx, ty, eq);
+  const jednadba = eq;
   let xDerivacija = undefined;
   let yDerivacija = undefined;
   let TockaRijesenje1 = undefined;
   let TockaRijesenje2 = undefined;
-  console.log("Dobar dan");
+  //nije string, ako ispisujes moras napisat .toString()
+  xDerivacija = math.derivative(jednadba, "x");
+  yDerivacija = math.derivative(jednadba, "y");
+  var tockaPretvoreno = false;
+  TockaRijesenje1 = math.evaluate(xDerivacija.toString(), { x: tocka[0] });
+  TockaRijesenje2 = math.evaluate(yDerivacija.toString(), { y: tocka[1] });
+  console.log(TockaRijesenje1, TockaRijesenje2);
+  //if (tx.toString().includes("π") || ty.toString().includes("π")) {
+  //console.log("Postoji pi");
+  //tockaPretvoreno = [pretvoriPIuBroj(tocka[0]), pretvoriPIuBroj(tocka[1])];
+
+  //} else console.log("Ne postoji Pi");
+
+  return (
+    <div>
+      {xDerivacija.toString()} || {yDerivacija.toString()}
+      <br />
+      xDerivacija je{xDerivacija}
+      <br />
+      yDerivacija je {yDerivacija}
+      <br />
+      TockaRijesenje 1 je {TockaRijesenje1}
+      <br />
+      TockaRijesenje 2 je {TockaRijesenje2}
+    </div>
+  );
   try {
     xDerivacija = math.derivative(jednadba, "x").toString();
     yDerivacija = math.derivative(jednadba, "y").toString();
