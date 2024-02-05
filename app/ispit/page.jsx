@@ -75,14 +75,14 @@ function page() {
         <MyCard
           props={{
             title: "Zadana je ploha r(u,v)=...",
-            href: "/ispit/zadanajeploha",
+            href: "/ispit/ploha",
             desc: "Zadana je ploha r(u,v)=(nešto v&&u, nešto v&&u, nešto v&&u) i točka T(x,y,z) koja se nalazi na zadanoj plohi. Neka je  Π  tangencijalna ravnina na zadanu plohu u točki T ",
           }}
         ></MyCard>
         <MyCard
           props={{
             title: "Dva Mimoilazna pravca",
-            href: "/ispit/mimosmjernipravci",
+            href: "/ispit/mimoilaznipravci",
             desc: "Zadana su dva mimosmjerna pravca P1 i P2. Neka je pravac n njihova zajednička normala. Odredi koordinate točke N1 koja je presjek pravca n i P1. Odredi koordinate točke N2 koja je presjek pravca n i P2",
           }}
         ></MyCard>
