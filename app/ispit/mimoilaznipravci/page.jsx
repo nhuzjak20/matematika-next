@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 import "../../globals.scss";
-import { Card, TextField, Typography } from "@mui/material";
+import { Card, TextField, Typography, Button } from "@mui/material";
 
 function Page() {
   const [vSmjer1, PromjenivSmjer1] = useState(0);
@@ -14,88 +14,124 @@ function Page() {
   const [orgTocka2, PromjeniOrgTocka2] = useState(0);
   return (
     <>
-      <div className="stars">
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-      </div>
       <Card className="flex flex-col items-center glassy-background-white w-fit p-4 m-auto my-24">
-        <div className="flex flex-row items-center">
-          <div className="flex flex-col items-center">
-            <div className="flex flex-row items-center">
-              <Typography variant="p">X</Typography>
+        <div className="flex flex-row items-center gap-6">
+          <div className="flex flex-row items-center">
+            <Typography variant="h4">P1...</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">X</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+              <hr />
+              <TextField
+                className="w-20"
+                type="text"
+                variant="filled"
+              ></TextField>
+            </div>
+            <Typography variant="h5">=</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">Y</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+
+              <hr />
               <TextField
                 type="text"
                 variant="filled"
                 className="w-20"
               ></TextField>
             </div>
-            <hr />
-            <TextField type="text" variant="filled"></TextField>
+            <Typography variant="h5">=</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">Z</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+
+              <hr />
+              <TextField
+                type="text"
+                variant="filled"
+                className="w-20"
+              ></TextField>
+            </div>
           </div>
-          <Typography variant="h5">=</Typography>
-          <div>
-            <Typography variant="p">Y</Typography>
-            <TextField type="text" variant="filled"></TextField>
-            <hr />
-            <TextField type="text" variant="filled"></TextField>
-          </div>
-          <Typography variant="h5">=</Typography>
-          <div>
-            <Typography variant="p">Z</Typography>
-            <TextField type="text" variant="filled"></TextField>
-            <hr />
-            <TextField type="text" variant="filled"></TextField>
+          <div className="flex flex-row items-center">
+            <Typography variant="h4">P2...</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">X</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+              <hr />
+              <TextField
+                className="w-20"
+                type="text"
+                variant="filled"
+              ></TextField>
+            </div>
+            <Typography variant="h5">=</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">Y</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+
+              <hr />
+              <TextField
+                type="text"
+                variant="filled"
+                className="w-20"
+              ></TextField>
+            </div>
+            <Typography variant="h5">=</Typography>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <Typography variant="p">Z</Typography>
+                <TextField
+                  type="text"
+                  variant="filled"
+                  className="w-20"
+                ></TextField>
+              </div>
+
+              <hr />
+              <TextField
+                type="text"
+                variant="filled"
+                className="w-20"
+              ></TextField>
+            </div>
           </div>
         </div>
-        <div></div>
+        <div>
+          <Button className="m-6" variant="contained">
+            Izračunaj
+          </Button>
+        </div>
         <div></div>
       </Card>
     </>

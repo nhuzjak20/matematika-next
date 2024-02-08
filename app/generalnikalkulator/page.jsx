@@ -6,6 +6,7 @@ import { Typography, Button } from "@mui/material";
 import Link from "next/link";
 import "../globals.scss";
 import BasicModal from "./BasicModal";
+import MyCard from "@/app/ispit/MyCard";
 
 function page() {
   return (
@@ -62,42 +63,22 @@ function page() {
         <div className="star"></div>
         <div className="star"></div>
       </div>
-      <div className="grid grid-cols-3 grid-rows-3 gap-3">
-        <div className="grid row-span-1">
-          <div class="container grid-span-2 ">
-            <div className="glassy-background m-4">
-              <CardContent>
-                <Typography variant="h4">Vektorski Produkt</Typography>
-                <Typography variant="p">
-                  Računanje vektorskog produkta dvaju trodimenzionalnih vektora
-                </Typography>
-              </CardContent>
-              <div className="flex flex-row justify-between m-3">
-                <div>
-                  <BasicModal
-                    title="Vektorski Produkt"
-                    content={<VektorskiProduktModal></VektorskiProduktModal>}
-                  ></BasicModal>
-                </div>
-                <div>
-                  <Link
-                    href="/generalnikalkulator/vektorskiprodukt"
-                    legacyBehavior
-                  >
-                    <a>
-                      <Button>Kalkulator</Button>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="grid row-span-1">
-          <VektorskiProduktModal></VektorskiProduktModal>
-          <p>Tekst</p>
-        </div>
-        <div className="grid row-span-1">c</div>
+      <div className="flex flex-col">
+        <MyCard
+          props={{
+            title: "Parcijalna derivacija",
+            href: "/generalnikalkulator/parcijalnaderivacija",
+            desc: "Parcijalna derivacija u n dimenzija je koncept koji se koristi u višedimenzionalnom prostoru kako bi se odredila stopa promjene funkcije u smjeru određene varijable, dok se ostale varijable drže konstantnim. Ovaj kalkulator računa parcijalnu derivaciju po nekoj varijabli(x,y,z)",
+          }}
+        ></MyCard>
+        <MyCard
+          props={{
+            title: "Vektorski Produkt",
+            href: "/generalnikalkulator/vektorskiprodukt",
+            desc: "Kalkulator za računanje vektorskog produkta",
+          }}
+        ></MyCard>
+        <div className=""></div>
       </div>
     </>
   );
